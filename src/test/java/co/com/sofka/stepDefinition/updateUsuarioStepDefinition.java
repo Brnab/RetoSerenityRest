@@ -1,5 +1,6 @@
 package co.com.sofka.stepDefinition;
 
+import co.com.sofka.question.ResponseCode;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -10,15 +11,19 @@ import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.hamcrest.Matchers;
 
+import static co.com.sofka.task.updateFailUser.UPDATEFAILUSER;
+;
 import static co.com.sofka.task.updateUser.updateUser;
 import static co.com.sofka.util.Log4jValues.LOG4J_PROPERTIES_FILE_PATH;
 import static co.com.sofka.util.Log4jValues.USER_DIR;
+import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.rest.questions.ResponseConsequence.seeThatResponse;
+import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.isEmptyString;
 
 
-public class usuarioNotfoundStepDefinition {
-    private static final Logger LOGGER = Logger.getLogger(usuarioNotfoundStepDefinition.class);
+public class updateUsuarioStepDefinition {
+    private static final Logger LOGGER = Logger.getLogger(updateUsuarioStepDefinition.class);
     private static final String restApi = "https://reqres.in/";
     Actor Bernabe = Actor.named("Bernabe");
 
@@ -43,10 +48,12 @@ public class usuarioNotfoundStepDefinition {
     }
     @Then("el sistema deberia mostrarme el codigo de actualizacion exitosa")
     public void el_sistema_deberia_mostrarme_el_codigo_de_actualizacion_exitosa() {
+
         Bernabe.should(
                 seeThatResponse(response -> response.statusCode(HttpStatus.SC_OK)
                         .body("updatedAt", Matchers.not(isEmptyString())))
         );
 
     }
+
 }

@@ -8,8 +8,8 @@ import org.junit.runner.RunWith;
 
 @CucumberOptions(
         snippets = CucumberOptions.SnippetType.CAMELCASE,
-        features = {"src/test/resources/features/usuarioNotFound.feature"},
+        features = {"src/test/resources/features/updateUsuario.feature"},
         glue = {"co.com.sofka.stepDefinition"}
 )
-public class usuarioNotFound {
+public class updateUsuario {
 }

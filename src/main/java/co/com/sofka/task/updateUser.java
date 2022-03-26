@@ -14,7 +14,10 @@ public class updateUser implements Task {
             Put.to("api/users/2")
                     .with(requestSpecification -> requestSpecification.header("setContentType(\"application json;charset = UTF-8\")",
                                     "aplication/json")
-                            .body("{\"name\": \"morpheus\",\"job\": \"zion resident\"}")
+                            .body("{\n" +
+                                    "    \"name\": \"morpheus\",\n" +
+                                    "    \"job\": \"zion resident\"\n" +
+                                    "}")
                     )
 
     );
