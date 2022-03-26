@@ -1,1 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="postear un comentario" skipped="0" tests="1" time="4.05" timestamp="2022-03-25 09:34:30"><testcase name="Comentario publicado exitosamente"/></testsuite>
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="postear un comentario" skipped="0" tests="2" time="3.59" timestamp="2022-03-25 10:17:02"><testcase name="Comentario publicado exitosamente"/><testcase name="Comentario fallido"/></testsuite>

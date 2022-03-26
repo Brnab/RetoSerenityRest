@@ -1,6 +1,7 @@
 package co.com.sofka.stepDefinition;
 
 import co.com.sofka.question.ResponseCode;
+import com.sun.jndi.ldap.Ber;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -11,6 +12,7 @@ import org.apache.http.HttpStatus;
 import org.apache.log4j.Logger;
 
 import static co.com.sofka.task.postComment.postComment;
+import static co.com.sofka.task.postCommentFail.postCommentFail;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static org.hamcrest.CoreMatchers.equalTo;
 
@@ -54,5 +56,38 @@ public class postStepDefinition {
         LastResponse.received().answeredBy(Bernabe).prettyPrint();
 
     }
+
+
+
+    @Given("estoy tratando de realizar un post")
+    public void estoy_tratando_de_realizar_un_post() {
+        Bernabe.can(CallAnApi.at(restApi));
+        LOGGER.info(Body);
+
+
+    }
+
+
+
+    @When("envio la informacion mal")
+    public void envio_la_informacion_mal() {
+        Bernabe.attemptsTo(
+                postCommentFail()
+        );
+
+    }
+
+
+
+    @Then("debo ver un error de servidor")
+    public void debo_ver_un_error_de_servidor() {
+        Bernabe.should(
+
+                seeThat("EL codigo de respuesta es", new ResponseCode(), equalTo(HttpStatus.SC_INTERNAL_SERVER_ERROR))
+        );
+        LastResponse.received().answeredBy(Bernabe).prettyPrint();
+
+    }
+
 
 }

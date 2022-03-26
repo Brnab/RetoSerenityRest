@@ -1,13 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="postear un comentario" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-03-26T02:34:30" hostname="LAPTOP-A0PFNQJO" time="4.24">
+<testsuite name="postear un comentario" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-03-26T03:17:02" hostname="LAPTOP-A0PFNQJO" time="3.758">
   <properties/>
-  <testcase name="Comentario publicado exitosamente" classname="postear un comentario" time="4.24"/>
+  <testcase name="Comentario publicado exitosamente" classname="postear un comentario" time="3.115"/>
+  <testcase name="Comentario fallido" classname="postear un comentario" time="0.643"/>
   <system-out><![CDATA[{
     "userId": 1,
-    "title": "District Directives Developer",
-    "body": "Éowyn ",
+    "title": "Dynamic Web Assistant",
+    "body": "Quickbeam ",
     "id": 101
 }
+<html>
+  <body>
+SyntaxError: Unexpected string in JSON at position 68
+    at JSON.parse (    <anonymous>)
+    at parse (/app/node_modules/body-parser/lib/types/json.js:89:19)
+    at /app/node_modules/body-parser/lib/read.js:121:18
+    at invokeCallback (/app/node_modules/body-parser/node_modules/raw-body/index.js:224:16)
+    at done (/app/node_modules/body-parser/node_modules/raw-body/index.js:213:7)
+    at IncomingMessage.onEnd (/app/node_modules/body-parser/node_modules/raw-body/index.js:273:7)
+    at IncomingMessage.emit (node:events:532:35)
+    at endReadableNT (node:internal/streams/readable:1346:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)</anonymous>
+  </body>
+</html>
 ]]></system-out>
   <system-err><![CDATA[log4j:WARN No appenders could be found for logger (co.com.sofka.stepDefinition.postStepDefinition).
 log4j:WARN Please initialize the log4j system properly.
