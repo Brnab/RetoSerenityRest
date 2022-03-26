@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="postear un comentario" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-03-26T02:34:30" hostname="LAPTOP-A0PFNQJO" time="4.24">
+  <properties/>
+  <testcase name="Comentario publicado exitosamente" classname="postear un comentario" time="4.24"/>
+  <system-out><![CDATA[{
+    "userId": 1,
+    "title": "District Directives Developer",
+    "body": "Éowyn ",
+    "id": 101
+}
+]]></system-out>
+  <system-err><![CDATA[log4j:WARN No appenders could be found for logger (co.com.sofka.stepDefinition.postStepDefinition).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+]]></system-err>
+</testsuite>

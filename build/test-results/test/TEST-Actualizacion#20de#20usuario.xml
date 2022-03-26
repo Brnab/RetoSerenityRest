@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Actualizacion de usuario" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-03-26T00:04:25" hostname="LAPTOP-A0PFNQJO" time="4.135">
-  <properties/>
-  <testcase name="actualizacion exitosa" classname="Actualizacion de usuario" time="4.135"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

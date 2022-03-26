@@ -10,7 +10,6 @@ import org.apache.http.HttpStatus;
 import org.apache.log4j.Logger;
 
 import static co.com.sofka.task.updateFailUser.UPDATEFAILUSER;
-import static co.com.sofka.task.updateUser.updateUser;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static org.hamcrest.CoreMatchers.equalTo;
 
